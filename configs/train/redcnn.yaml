@@ -1,0 +1,18 @@
+dataset:
+  data_dir: 'REDCNN_Codes/Dataset'
+  batch_size: 16
+  augment: true
+
+optimizer:
+  name: ADAM
+  milestones: [20, 40, 60, 80]
+  lr: 1.e-4
+  gamma: 0.5
+  weight_decay: 0
+
+batch_size: 16
+epochs: 100
+test_every: 1
+
+cpu: False
+seed: 1

@@ -1,0 +1,24 @@
+dataset:
+  data_dir: 'REDCNN_Codes/Dataset'
+  augment: true
+  batch_size: 16 #원본 16개. CUDA out of memory 때문에 잠시 줄여둠.
+
+model:
+  name: redcnn
+  apath: 'REDCNN_Codes/experiment/redcnn_l1/model'
+
+optimizer:
+  name: ADAM
+  lr: 1.e-4
+  milestones: [20, 40, 60, 80]
+  gamma: 0.5
+  weight_decay: 0
+
+epochs: 100
+test_every: 1
+save_models: true
+resume: -1
+
+n_threads: 8
+cpu: false
+seed: 1
